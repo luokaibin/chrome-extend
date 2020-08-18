@@ -1,0 +1,20 @@
+.header {
+  width: 350px;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header::after {
+  content: '';
+}
+.header .icon-left {
+  font-size: 20px;
+  cursor: pointer;
+}
+.header .title {
+  font-size: 16px;
+  color: #333333;
+}
