@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +12,30 @@
     }
   </style>
 </head>
+
 <body>
   <div id="app"></div>
   <script src="./react.min.js"></script>
   <script src="./react-dom.min.js"></script>
-  <script src="./popup.js"></script>
+  <script src="./babel.min.js"></script>
+  <!-- <script src="./popup.js" type="text/babel"></script> -->
+  <script type="text/babel">
+    /** Start 基础示例 */
+    const Header = ({ children }) => {
+      const left = '<'
+      return (
+        <header className="header"><span className="icon-left">{left}</span><div className="title">{children}</div></header>
+      )
+    }
+
+    const App = () => {
+      const [text, setText] = React.useState('标题');
+      return (<Header>{text}</Header>);
+    }
+    const domContainer = document.querySelector('#app');
+    ReactDOM.render(App, domContainer);
+    /** End */
+  </script>
 </body>
+
 </html>
