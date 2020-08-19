@@ -3,8 +3,18 @@
   "version": "1.0",
   "description": "Chrome extend demo",
   "manifest_version": 2,
+  "background": {
+    "scripts": ["./js/lib/localforage.min.js","./js/background/index.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "js": ["./js/content_script/index.js"]
+    }
+  ],
   "browser_action": {
     "default_popup": "popup.html",
-    "default_icon": "music_icon_16.png"
+    "default_icon": "./image/music_icon_16.png"
   }
 }
