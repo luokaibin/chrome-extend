@@ -10,7 +10,8 @@
   "content_scripts": [
     {
       "matches": ["http://*/*","https://*/*"],
-      "js": ["./js/content_script/index.js"]
+      "css": ["./style/goTop.css"],
+      "js": ["./js/content_script/index.js", "./js/content_script/goTop.js"]
     }
   ],
   "browser_action": {
