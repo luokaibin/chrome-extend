@@ -13,7 +13,7 @@
       "js": ["./js/content_script/index.js"]
     }
   ],
-  "browser_action": {
+  "page_action": {
     "default_popup": "popup.html",
     "default_icon": "./image/music_icon_16.png",
     "default_title": "Chrome 插件 demo"

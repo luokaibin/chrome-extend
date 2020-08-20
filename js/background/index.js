@@ -15,6 +15,8 @@ const eventMap = {
 
 chrome.runtime.onMessage.addListener(
   (request, sender, sendResponse) => {
+    console.log(request,sender);
+    chrome.pageAction.show(sender.tab.id);
     sendResponse({code: 1, message: 'success'})
     const {eventName, data} = request;
     eventMap[eventName] && eventMap[eventName](data);
